@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>CRUD Application</h2>
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="box-1">
+                <div class="title">Register</div>
+                <form class="form">
+                    <div class="form__div">
+                        <label>Roll No <span>*</span></label>
+                        <input type="text" id="rollno">
+                    </div>
+                    <div class="form__div">
+                        <label>Name<span>*</span></label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form__div">
+                        <label>Section<span>*</span></label>
+                        <input type="text" id="section">
+                    </div>
+                    <div class="form__div">
+                        <label>Gender<span>*</span></label>
+                        <input type="text" id="gender">
+                    </div>
+                    <div class="btns">
+                        <button type="submit" id="submit">Submit</button>
+                        <button type="submit" id="upload">Upload</button>
+                    </div>
+                </form>
+            </div>
+            <div class="box-2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>Section</th>
+                            <th>Gender</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--Firebase Libraries-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

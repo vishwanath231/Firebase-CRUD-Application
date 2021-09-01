@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(211, 211, 211);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+input,
+button{
+    font-family: "poppins",sans-serif;
+    border-radius: 3px;
+    outline: none;
+    padding: 7px 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*--------------------- 
+        HEADER 
+-----------------------*/
+
+.header{
+    width: 100%;
+    height: 100px;
+    background: url('https://images.pexels.com/photos/3826676/pexels-photo-3826676.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.header h2{
+     background-image: linear-gradient(109.6deg, rgba(247, 253, 166, 1) 11.2%, rgba(128, 255, 221, 1) 57.8%, rgba(255, 128, 249, 1) 85.9%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+
+/*-----------------------
+        CONTAINER 
+-------------------------*/
+.container{
+    max-width: 1200px;
+    margin: 3rem auto 2rem auto;
+    padding: 0 15px;
+}
+.grid{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box-1{
+    width: 35%;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.form{
+    width: 100%;
+}
+.form__div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.form__div label{
+    margin-bottom: .3rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+.form__div label span{
+    color: crimson;
+}
+.form__div input{
+    border: 1px solid #ddd;
+    text-transform: capitalize;
+}
+
+.btns button{
+    width: 100%;
+    border: none;
+    background-color: cornflowerblue;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+#submit.active{
+    display: none;
+}
+#upload{
+    display: none;
+}
+#upload.active{
+    display: block;
+}
+
+
+
+
+
+/*===========================
+        TABLE 
+==========================*/
+
+.box-2{
+    width: 60%;
+    height: 72vh;
+    display: block;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-of-type(even) {
+    background: rgb(240, 240, 240);
+}
+
+th {
+    background: cornflowerblue;
+    color: white;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+td a{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.fa-trash-alt{
+    color: crimson;
+}
+.fa-pencil-alt{
+    color: rgb(61, 61, 218);
+}
+
+
+@media (max-width: 760px){
+    table {
+        width: 100%;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    tbody tr{
+        margin-bottom: .5rem;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+    td,th{
+        text-align: left;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-column);
+        color: #000;
+    }
+}
+
+@media(max-width:920px) {
+    .box-1 {
+        width: 100%;
+    }
+
+    .box-2 {
+        width: 100%;
+    }
+
+    .grid {
+        flex-direction: column;
+    }
+}
+
