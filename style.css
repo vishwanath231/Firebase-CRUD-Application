@@ -64,6 +64,7 @@ button{
      background-image: linear-gradient(109.6deg, rgba(247, 253, 166, 1) 11.2%, rgba(128, 255, 221, 1) 57.8%, rgba(255, 128, 249, 1) 85.9%);
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
+     padding: 15px;
 }
 
 
@@ -86,6 +87,7 @@ button{
     padding: 15px;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    margin-bottom: 2rem;
 }
 .title{
     text-align: center;
@@ -123,6 +125,7 @@ button{
     text-transform: uppercase;
     font-size: 15px;
     cursor: pointer;
+    padding: 10px 15px;
 }
 #submit.active{
     display: none;
@@ -166,8 +169,8 @@ th {
 td,
 th {
     padding: 10px;
-    border: 1px solid #ccc;
     text-align: center;
+    border: 1px solid #ddd;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
@@ -187,6 +190,8 @@ td a{
 @media (max-width: 760px){
     table {
         width: 100%;
+    padding-right: 10px;
+
     }
 
     table,
@@ -198,7 +203,7 @@ td a{
         display: block;
     }
     tbody tr{
-        margin-bottom: .5rem;
+        margin-bottom: .9rem;
     }
 
     thead tr {
@@ -208,7 +213,8 @@ td a{
     }
 
     tr {
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
+        border-radius: 3px;
     }
     td,th{
         text-align: left;
@@ -216,7 +222,7 @@ td a{
 
     td {
         border: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #ddd;
         position: relative;
         padding-left: 50%;
     }
@@ -229,7 +235,7 @@ td a{
         padding-right: 10px;
         white-space: nowrap;
         content: attr(data-column);
-        color: #000;
+        color: rgb(94, 94, 94);
     }
 }
 
